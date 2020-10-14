@@ -108,7 +108,7 @@ func prepareWebhookMessage(e event.Event, m *Webhook) *WebhookMessage {
 		},
 		Text: e.Message(),
 		Time: time.Now(),
-		Action: "kubeWatch"
+		Action: "kubeWatch",
 	}
 }
 
