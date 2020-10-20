@@ -53,6 +53,7 @@ type WebhookMessage struct {
 	EventMeta EventMeta `json:"eventmeta"`
 	Text      string    `json:"text"`
 	Time      time.Time `json:"time"`
+	Action    string
 }
 
 // EventMeta containes the meta data about the event occurred
