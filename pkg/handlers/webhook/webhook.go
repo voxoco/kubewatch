@@ -53,7 +53,7 @@ type WebhookMessage struct {
 	EventMeta EventMeta `json:"eventmeta"`
 	Text      string    `json:"text"`
 	Time      time.Time `json:"time"`
-	Action    string
+	Action    string    `kubeWatch`
 }
 
 // EventMeta containes the meta data about the event occurred
@@ -110,7 +110,6 @@ func prepareWebhookMessage(e event.Event, m *Webhook) *WebhookMessage {
 		},
 		Text: e.Message(),
 		Time: time.Now(),
-		action: "kubeWatch",
 	}
 }
 
